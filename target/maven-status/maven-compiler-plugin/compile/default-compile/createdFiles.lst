@@ -1,0 +1,10 @@
+cmms\entities\Team.class
+cmms\entities\User.class
+cmms\entities\WorkOrder$Priority.class
+cmms\entities\Asset.class
+cmms\entities\WorkOrder.class
+cmms\repository\AssetRepository.class
+cmms\entities\WorkOrder$Status.class
+cmms\service\AssetService.class
+cmms\entities\User$Role.class
+cmms\entities\Vendor.class
