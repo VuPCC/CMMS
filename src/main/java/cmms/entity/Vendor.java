@@ -1,4 +1,4 @@
-package cmms.entities;
+package cmms.entity; // Thay "yourpackage" bằng package thực tế của bạn
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -6,12 +6,12 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "teams")
+@Table(name = "vendors")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Team {
+public class Vendor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,12 +20,11 @@ public class Team {
     @Column(nullable = false, length = 255)
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "leader_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_team_leader"))
-    private User leader;
+    @Column(length = 255)
+    private String contact;
 
-    @Column(length = 20)
-    private String phone;
+    @Column(columnDefinition = "TEXT")
+    private String address;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;

@@ -1,4 +1,4 @@
-package cmms.entities;
+package cmms.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
